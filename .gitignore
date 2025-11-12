@@ -8,3 +8,6 @@
 *.jar
 *.war
 .DS_Store
+
+# Ignore generated exports and local output
+/output/
