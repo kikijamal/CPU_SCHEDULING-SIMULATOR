@@ -6,6 +6,8 @@
     <artifactId>cpu-scheduling</artifactId>
     <version>1.0</version>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
@@ -21,10 +23,20 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <release>17</release>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M9</version>
                 <configuration>
                     <useModulePath>false</useModulePath>
+                    <skipTests>false</skipTests>
                 </configuration>
             </plugin>
         </plugins>
